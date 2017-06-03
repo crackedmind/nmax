@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "nmax"
+
+numbers = ARGV.shift
+
+if numbers && numbers.to_i > 0
+    out = Nmax::perform(numbers.to_i)
+    out.each{|v| puts v}
+else
+    puts 'First argument empty or non positive integer' 
+end
